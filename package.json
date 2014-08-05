@@ -20,6 +20,9 @@
     "url": "https://github.com/theturtle32/WebSocket-Node.git"
   },
   "homepage": "https://github.com/theturtle32/WebSocket-Node",
+  "publishConfig": {
+    "registry": "https://npm.pandell.com"
+  },
   "engines": {
     "node": ">=0.8.0"
   },
@@ -40,6 +43,7 @@
     "verbose": false
   },
   "scripts": {
+    "prepublish": "node-gyp rebuild",
     "install": "(node-gyp rebuild 2> builderror.log) || (exit 0)",
     "test": "faucet test/unit",
     "gulp": "gulp"
